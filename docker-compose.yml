@@ -2,9 +2,9 @@
 version: '3'
 
 services:
-  UserAuthentication-Service:
+  UserAuthenticationService:
     image: userauthentication
-    build: UserAuthentication-Service/
+    build: UserAuthenticationService/
     restart: always
     depends_on:
       - mysqlDatabase
@@ -31,7 +31,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: approot
       MYSQL_PASSWORD: apppass
-      MYSQL_DATABASE: keepnote
+      MYSQL_DATABASE: news
 
   zuulgateway:
     image: zuulgateway
@@ -46,7 +46,7 @@ services:
 
   newswebapp:
     image: newswebapp
-    build: News-SPA/
+    build: Angular/
     network_mode: host
     ports:
       - 8080:8080

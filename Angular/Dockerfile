@@ -1,5 +1,5 @@
 FROM node:8.10.0
 WORKDIR usr/lib/app
-COPY dist dist 
+COPY dist dist
 RUN npm install http-server -g
-ENTRYPOINT ["http-server", "dist/keep3"]
+ENTRYPOINT ["http-server", "dist/News-SPA"]
