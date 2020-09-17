@@ -1,0 +1,36 @@
+.container{
+    min-height: 200vh;
+}
+
+
+.form-container{
+    height:30vh;
+    margin: 10vh 30vw;
+}
+
+button{
+    margin-left: 3vw;
+}
+
+input{
+    border-radius: 2em;
+    height:5vh;
+}
+
+.searches{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+h2{
+    text-align: center;
+    color: tomato;
+  }
+
+
+@media(max-width:576px){
+    .searches{
+        display: flex;
+        flex-flow: column wrap;
+    }
+}

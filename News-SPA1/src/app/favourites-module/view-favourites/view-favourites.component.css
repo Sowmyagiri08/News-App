@@ -1,0 +1,60 @@
+.article-card {
+    max-width: 25vw;
+    max-height: 70vh ;
+    margin: 5vh 7vw;
+    justify-content: center;
+
+  }
+
+  .cards{
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .article-card:hover {
+      box-shadow: 5px solid black;
+  }
+  
+  .mat-card-image {
+    background-size: cover;
+    height: 20vh;
+    width: 20vw;
+    margin:auto;
+  }
+
+  a{
+      text-decoration: none;
+  }
+
+  .favourites{
+    min-height: 100vh;
+  }
+
+  h1,h2{
+    text-align: center;
+  }
+
+  h2{
+    color: tomato;
+  }
+
+  button{
+    border-radius: 2em;
+    height:5vh;
+    background-color:coral;
+  }
+
+
+  @media(max-width:576px){
+    .article-card {
+      max-width: 100vw;
+      max-height: 100vh ;
+      margin: 5vh 7vw;
+      justify-content: center;
+  
+    }
+    .cards{
+      display: flex;
+      flex-direction: column;
+    }
+  }

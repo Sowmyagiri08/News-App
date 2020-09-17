@@ -1,0 +1,18 @@
+<mat-card class="article-card">
+    <small class="smessage" *ngIf='success'>{{message}}</small>
+    <small class="fmessage" *ngIf='!success'>{{message}}</small>
+    <mat-card-header>
+        <mat-card-title>{{ article.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="article.urlToImage">
+    <mat-card-content>
+        <p>
+            {{ article.description }}
+        </p>
+        <a [href]="article.url" >Learn more..</a>
+        <br/>
+        <br/>
+        <button type="button" (click)="addToFavourites(article)">Add to favourites</button>
+        
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,27 @@
+<div class="favourites">
+  <h1>Welcome {{user}}! </h1>
+  <h1>Your favourite news! </h1>
+  <div class="cards" *ngIf="favouritesList.length>0 else loading">
+    <mat-card class="article-card" *ngFor='let article of favouritesList'>
+      <mat-card-header>
+        <mat-card-title>{{ article.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="article.urlToImage">
+      <mat-card-content>
+        <p>
+          {{ article.description }}
+        </p>
+        <a [href]="article.url" >Learn more..</a>
+        <br/>
+        <br/>
+        <button type="button" (click)='delete(article.articleId)'>Delete</button>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+  <ng-template #loading>
+    <h2>No favourites to show!</h2>
+  </ng-template>
+
+</div>
