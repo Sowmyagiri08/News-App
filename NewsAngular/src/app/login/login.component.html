@@ -1,0 +1,16 @@
+<div class="login">
+    <label class="error-message">{{ submitMessage }}</label>
+
+    <form [formGroup]='loginForm' (ngSubmit)='loginSubmit()'>
+        <mat-form-field>
+            <input class="username" id="username" matInput placeholder="Username" type="text" required
+                formControlName='userId'>
+
+        </mat-form-field>
+        <mat-form-field>
+            <input class="password" id="password" matInput required placeholder="Password" type="password"
+                formControlName='userPassword'>
+        </mat-form-field>
+        <button id="login" type="submit" [disabled]='loginForm.invalid' mat-raised-button color="primary">Login</button>
+    </form>
+</div>
